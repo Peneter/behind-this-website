@@ -1,148 +1,181 @@
-### Who’s behind this website? A Checklist. 
 
+<div dir="auto">
+ 
+نویسندگان اصلی :
 By Priyanjana Bengani ([@acookiecrumbles](https://twitter.com/acookiecrumbles)) and Jon Keegan ([@jonkeegan](https://twitter.com/jonkeegan))
 IRE NICAR Conference - March 4, 2022
 Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJxt6I_JflRmEYH8cp4Xc84/edit?usp=sharing) | [Russian](https://docs.google.com/presentation/d/1TxynZrKKrYMvPFk3oxYMNRkx8fp0Gs_AhQufuVkKOOo/edit?usp=sharing) 
 
 *Thank you to Svetlana Borodina at Harriman Institute for the Russian translation!*
 
+  ### چک لیست جهت شناسایی صاحب سایت (ترجمه و اضافه کردن یک سری تکنیک) Persian . 
 
-#### What is this?
+  [@soheilhashemi](https://twitter.com/soheilhashemi_)
+  [OSINT?](https://twitter.com/soheilhashemi_/status/1446899535826100230?s=20)
+  [Blog Peneter](https://blog.peneter.com]
+  [OSINT1](https://blog.peneter.com/clubhouse-osint-1-preparation/)
+  [OSINT_Image](https://blog.peneter.com/clubhouse-osint-2-email/)
+  [OSINT_Email](https://blog.peneter.com/clubhouse-osint-3-email/)
+  [OSINT_Domain&IP](https://blog.peneter.com/clubhouse-osint-4-5-domain-ip/)
+  [OSINT_SocialMedia](https://blog.peneter.com/clubhouse-osint-6-social-network-twitter/)
 
-This checklist is meant to be used as a reporting tool to help journalists and researchers when trying to find out who published a website. This is meant to be used in conjunction with offline reporting techniques. 
+#### این چیست ؟
+این چک لیست قرار است به عنوان یک ابزار گزارش برای کمک به روزنامه نگاران و محققان در هنگام تلاش برای یافتن اینکه چه کسی یک وب سایت را منتشر کرده است، استفاده شود. این به معنای استفاده در ارتباط با تکنیک های گزارش دهی آفلاین است. 
 
-Following this checklist does not guarantee that you can unmask the owner of a website that does not want to be found, but it can help surface crucial clues and connections that can act as leads for further reporting. 
+استفاده از این چک لیست تضمین نمی کند که می توانید نویسنده ناشناس وب سایتی را که نمی خواهد پیدا شود، را شناسایی کنید، اما می تواند به کشف سرنخ ها و ارتباطات مهمی کمک کند که می توانند به عنوان سرنخ برای گزارش بیشتر عمل کنند. 
 
-🌟 Strong recommendation: while running through this checklist, create a data diary — it can be a TextEdit doc, a Google Doc, just the Notes app, whatever. It is important to be able to retrace your steps. 
+🌟 توصیه جدی: در حین اجرای این چک لیست، یک ادیتور ایجاد کنید — می تواند یک سند TextEdit، یک Google Doc، فقط برنامه Notes باشد، هر چه باشد. مهم است که بتوانید مراحل خود را دوباره دنبال کنید. 
 
-#### Site Content
+#### محتوای سایت 
 
-##### Text
-- [ ] ✍️ Are there any authors listed? 
-    - If the site is Wordpress, try this wildcard search on Google to reveal the author list: 
-    "https://yourwebsite.com/author/*/"
+##### متن
+- ✍️ آیا نویسندگانی لیست شده اند؟
+ - اگر سایت وردپرس است، این مانند لینک زیر در گوگل سرچ کنید تا لیست نویسندگان را مشاهده کنید:<br/> 
+  `https://yourwebsite.com/author/*/` <br/>
+   - به عنوان مثال اگر روی سایت پنتر بزنید می بینید که یوزرنیم نویسنده "Peneter" است:<br/>
+   `https://blog.peneter.com/author/*/`
 
-- [ ] 📫 Are there any e-mail addresses or contact information? 
-  - If there are e-mail addresses, do those share the domain with the website?
-  - Does the email show up in [haveibeenpwned.com](https://haveibeenpwned.com/)?
-  - Check to see if there is a Gravatar associated with that address: 
-    - https://en.gravatar.com/site/check/XXXXX@gmail.com
-- [ ] 🕑 What’s the server’s local time?
-  - Look at the `datetime` attribute in links on Wordpress sites. GMT timestamp can reveal time zone based on GMT offset: 
-    `<time class="updated" datetime="2022-03-04T10:21:40+06:00">March 4, 2022</time>`
-- [ ] 🕶 Does the website have a privacy policy or terms and conditions that mentions an LLC, or what regional laws apply?
-- [ ] 📡 Does the website have an RSS feed?
-  - Does the RSS feed give any additional information about authors / stories that aren't visible on the site? 
-  - You can pull RSS article links into Google sheets using [IMPORTFEED](https://infoinspired.com/google-docs/spreadsheet/how-to-use-importfeed-function-in-google-sheets/)
+- [ ] 📫 آیا آدرس ایمیل یا اطلاعات تماس وجود دارد؟
+   - اگر آدرس های ایمیل وجود دارد، آیا ایمیل با دامین سایت هست یا میل سرور عمومی هست؟ در قسمت ایمیل های لینک زیر ابزارهای اوسینت معرفی شده اند:
+   - https://osintframework.com/
+   - https://map.malfrats.industries/
+   - https://lampyre.io/
+ 
+   - آیا ایمیل در [haveibeenpwned.com](https://haveibeenpwned.com) نمایش داده می شود؟ (اگر توسط ایمیل در جایی ثبت نام شده باشد که دیتابیسش لیک شده باشد می توانید در بعضی مواقع پسورد یا اسم و فامیل نویسنده را بدست آورید)
+   - بررسی کنید که آیا گراواتار مرتبط با آن آدرس وجود دارد یا خیر:
+     - https://en.gravatar.com/site/check/XXXXX@gmail.com </br>
+     
+- [ ] 🕑 ساعت محلی سرور چقدر است؟
+   - به ویژگی 'datetime' در سورس HTML سایت های وردپرس نگاه کنید. CTLR + U سپس دنبال <Time> بگردید : 
+   ``<time datetime="1401-01-06"><i class="remixicon remixicon-calendar-line"></i> 6 فروردین 1401</time>``
+- [ ] 🕶 آیا وب سایت قانون حفظ حریم خصوصی یا شرایط و ضوابطی دارد که به یک LLC اشاره می کند، یا چه قوانین منطقه ای اعمال می شود؟
+- [ ] 📡 آیا وبسایت فید RSS دارد؟
+   - آیا فید RSS اطلاعات بیشتری در مورد نویسندگان یا پستهایی که در سایت قابل مشاهده نیستند ارائه می دهد؟
+   - میتوانید با استفاده از [IMPORTFEED](https://infoinspired.com/google-docs/spreadsheet/how-to-use-importfeed-function-in-google-sheets) پیوندهای مقاله RSS را به برگه‌های Google بکشید 
 ​
-##### Features and functionality 
-- [ ] 🗞 Does the website have a newsletter? 
-  - Check for the physical postal address — required by the CAN-SPAM Act in the US
-- [ ] 💸 Does the website collect donations? 
-- [ ] 🛒 Does the website have an e-commerce store? Or, does it sell products?
-    - Try walking through the checkout process (without paying). Sometimes the real payee name is revealed just before you confirm the payment.  
+##### ویژگی ها و عملکرد
+- [ ] 🗞 آیا وبسایت خبرنامه دارد؟
+   - آدرس پستی فیزیکی را بررسی کنید - طبق قانون CAN-SPAM در ایالات متحده لازم است
+- [ ] 💸 آیا وب سایت کمک های مالی جمع آوری می کند؟ (اگر آدرس والت کریپتو باشد می توانید تراکنشها را مشاهده کنید.)
+- [ ] 🛒 آیا وب سایت قسمت فروشگاه دارد ؟
+     - سعی کنید مراحل پرداخت را طی کنید (بدون پرداخت). گاهی اوقات نام گیرنده واقعی درست قبل از تایید پرداخت فاش می شود. 
 ​
-##### Links
-- [ ] 🔗 What domains does the website link to most? (Requires scraping)
-- [ ] ❤️ Who links to the domain most often? 
-    - Google search operator: "link:yourwebsite.com"
-    - Check backlinks on [ahrefs.com](https://ahrefs.com) 💵
-- [ ]  Do the links have UTM codes? 
+##### پیوندها
+- [ ] 🔗 وب سایت بیشتر به چه دامنه هایی لینک می دهد؟ (نیاز به تراشیدن دارد)
+- [ ] ❤️ چه کسی بیشتر به دامنه لینک می دهد؟
+     - اپراتور جستجوی گوگل: "link:yourwebsite.com"
+     - بک لینک ها را در [ahrefs.com](https://ahrefs.com) بررسی کنید 💵
+- [ ] آیا پیوندها دارای کدهای UTM هستند؟ 
 ​
-##### Photos, images and documents
-- [ ] 📸 Are there author photos? 
-  - Use reverse image search to see if the same images appear elsewhere
-  - Check [sensity.ai](https://sensity.ai) to see if the image is GAN-generated 
-  - Read more about spotting GAN-generated images [here](https://www.theguardian.com/technology/2020/jan/13/what-are-deepfakes-and-how-can-you-spot-them).  
-- [ ] 🔎 Do the images have EXIF data? 
-    - Instructions [here](https://www.howtogeek.com/289712/how-to-see-an-images-exif-data-in-windows-and-macos/#:~:text=Viewing%20EXIF%20data%20in%20Windows,the%20photo%20was%20taken%20with.).
-- [ ] 👀 Do the images have any other identifying information? 
-  - Run through the list [here](https://themarkup.org/ask-the-markup/2020/03/12/photos-privacy)
-- [ ] 🪣 Where are the images hosted?
-  - If on AWS S3, the bucket name can be revealing — or you might find the bucket isn’t secure. 
-- [ ] 📄 Are there PDFs hosted on the site? 
-  - On a search engine, "filetype:pdf site:<yourwebsite.com>"
-  - If you find some, check the metadata with "Get Info" in your PDF viewer.
+##### عکس ها، تصاویر و اسناد
+- [ ] 📸 آیا عکس های نویسنده وجود دارد؟
+  - از جستجوی عکس معکوس استفاده کنید تا ببینید آیا همان تصاویر در جای دیگری ظاهر می شوند یا خیر
+  - [sensity.ai] (https://sensity.ai) را بررسی کنید تا ببینید آیا تصویر GAN تولید شده است یا خیر
+  - درباره مشاهده تصاویر تولید شده توسط GAN [اینجا](https://www.theguardian.com/technology/2020/jan/13/what-are-deepfakes-and-how-can-you-spot-them) بیشتر بخوانید.
+- [ ] 🔎 آیا تصاویر دارای داده EXIF ​​هستند؟
+    - دستورالعمل‌ها [اینجا](https://www.howtogeek.com/289712/how-to-see-an-images-exif-data-in-windows-and-macos/#:~:text=Viewing%20EXIF% 20داده%20در%20ویندوز،%20عکس%20%20با%20گرفته شد.).
+- [ ] 👀 آیا تصاویر اطلاعات شناسایی دیگری دارند؟
+  - فهرست را اجرا کنید [اینجا](https://themarkup.org/ask-the-markup/2020/03/12/photos-privacy)
+- [ ] 🪣 تصاویر کجا میزبانی می شوند؟
+  - اگر در AWS S3، نام سطل ممکن است آشکار باشد - یا ممکن است متوجه شوید که سطل امن نیست.
+- [ ] 📄 آیا فایل های PDF در سایت میزبانی می شود؟
+  - در موتور جستجو، "filetype:pdf site:<yourwebsite.com>"
+  - اگر تعدادی پیدا کردید، متادیتا را با "دریافت اطلاعات" در نمایشگر PDF خود بررسی کنید. (اگر پاک نشده باشد شما به اسم نویسنده،ایمیل، تکنولوژی، یوزنیم سیستم عامل دست پیدا خواهید کرد)
+  -شما می توانید از موتورهای جستجو دیگر برای انجام سرچ (دورک) استفاده کنید برخی از موتورهای جست و جو:
+    https://www.google.com/
+    https://www.google.com/advanced_search
+    http://www.googleguide.com/print/adv_op_ref.pdf
+    https://www.bing.com/
+    https://www.bruceclay.com/blog/bing-google-advanced-search-operators/
+    https://yandex.com/
+    https://duckduckgo.com/
+    https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/
+    https://baidu.com
+ -این کار می توانید با دو ابزاز زیر به صورت اتومات انجام دهید (متادیتا خودشان استخراج می کنند)
+   (https://www.kali.org/tools/metagoofil)[metagoofil]
+   (https://github.com/ElevenPaths/FOCA)[FOCA]
+  
 ​
-#### Social Media
+#### رسانه های اجتماعی
 
-If there are any social media profiles mentioned on the site, they are worth investigating. 
+اگر پروفایل های رسانه های اجتماعی در سایت ذکر شده است، ارزش بررسی دارند.
 
-- [ ] 👤 Are there any social media accounts in the \<meta\> section of the HTML? 
-- [ ] 📅 When were the individual accounts created? Does it line up with the site history?
-- [ ] 📊 What platform has the biggest reach?
-- [ ] 📣 Is the messaging different across platforms? 
-- [ ] 📇 Do they have completely distinct account names across social media platforms or are they more-or-less the same? 
-  - Note: just because you find the same account name across platforms doesn’t necessarily mean they belong to the same person! 
+- [ ] 👤 آیا هیچ حساب رسانه اجتماعی در بخش \<meta\> HTML وجود دارد؟
+- [ ] 📅 حساب های فردی چه زمانی ایجاد شدند؟ آیا با تاریخچه سایت مطابقت دارد؟
+- [ ] 📊 کدام پلتفرم بیشترین دسترسی را دارد؟
+- [ ] 📣 آیا پیام رسانی در پلتفرم ها متفاوت است؟
+- [ ] 📇 آیا نام‌های حساب کاملاً متمایز در پلتفرم‌های رسانه‌های اجتماعی دارند یا کم و بیش یکسان هستند؟
+   - توجه: فقط به این دلیل که نام حساب یکسانی را در پلتفرم‌ها پیدا می‌کنید، لزوماً به این معنی نیست که آنها متعلق به یک شخص هستند!  
 
 
-##### Facebook
-On the Facebook profile, go to Page Transparency:
-- [ ] ☎️ Is there an address and phone number for the page?
-- [ ] ⏪ Does the page history reveal a different name? 
-  - Has the page shifted topics? 
-- [ ] 🐣 When was the Facebook page created?
-- [ ]  Is the page running any groups? 
-- [ ] 🗳 Has the page run any ads? Has the page run political ads? 
-- [ ] 🤖 Does Facebook flag any ‘related pages’ for the given page? Rely on Facebook’s algorithms to find connections! 
+##### فیس بوک
+در نمایه فیس بوک، به صفحه شفافیت بروید:
+- [ ] ☎️ آیا آدرس و شماره تلفن صفحه وجود دارد؟
+- [ ] ⏪ آیا تاریخچه صفحه نام دیگری را نشان می دهد؟
+   - آیا صفحه موضوعات را تغییر داده است؟
+- [ ] 🐣 صفحه فیس بوک چه زمانی ایجاد شد؟
+- [ ] آیا این صفحه گروهی را اجرا می کند؟
+- [ ] 🗳 آیا صفحه تبلیغاتی دارد؟ آیا این صفحه تبلیغات سیاسی دارد؟
+- [ ] 🤖 آیا فیس بوک هر "صفحه مرتبط" را برای صفحه داده شده پرچم گذاری می کند؟ برای یافتن اتصالات به الگوریتم های فیس بوک تکیه کنید! 
 ​
-##### Twitter
-On Twitter, the account might be part of a pod or network that boosts each other. Using [en.whotwi.com](https://en.whotwi.com/), it’s worth checking:
-- [ ] 👯‍♀️ Who is the account is engaging with?
-- [ ] 🐦 What are the account’s tweeting patterns? 
-- [ ] #️⃣ What hashtags are associated with the account?
-- [ ] Who were the account's the first follows / followers? 
-    - Find this here: https://en.whotwi.com/  
+##### توییتر
+در توییتر، حساب ممکن است بخشی از یک پاد یا شبکه باشد که یکدیگر را تقویت می کند. با استفاده از [en.whotwi.com](https://en.whotwi.com/)، ارزش بررسی را دارد:
+- [ ] 👯‍♀️ اکانت با چه کسی درگیر است؟
+- [ ] 🐦 الگوهای توییت کردن حساب کاربری چیست؟
+- [ ] #️⃣ چه هشتگ هایی با حساب کاربری مرتبط هستند؟
+- [ ] اولین فالوور/فالوور حساب چه کسانی بودند؟
+     - این را اینجا پیدا کنید:
+   `https://en.whotwi.com/` 
 ​
-##### Other platforms
-Don't forget to check to see if the site has accounts on Youtube, Instagram, Reddit, Github, 
+##### پلتفرم های دیگر
+فراموش نکنید که بررسی کنید ببینید آیا سایت دارای حساب‌هایی در یوتیوب، اینستاگرام، ردیت، گیت‌هاب، 
 
-#### Infrastructure 
-- [ ] 🗄 Have you archived the website? (You always should!)
-  - you can do this on archive.org or use their [browser extension](chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html).
-  - you can grab the whole website on Terminal with `wget`:
-   `wget -mpEk <yourwebsite.com>`
+#### زیرساخت ( منظور سرور)
+- [ ] 🗄 آیا وب سایت را بایگانی کرده اید؟ (تو همیشه باید!)
+   - می توانید این کار را در archive.org انجام دهید یا از [پسوند مرورگر] آن استفاده کنید (chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html).
+   - می توانید کل وب سایت را در ترمینال با «wget» بگیرید:
+    `wget -mpEk <yourwebsite.com>` 
 
-- [ ] 🖥 What is the website using? 
-  - Is it using Wordpress, Squarespace, something else?
+- [ ] 🖥 وب سایت از چه چیزی استفاده می کند؟
+   - آیا از Wordpress، Squarespace، چیز دیگری استفاده می کند؟ 
 
-- [ ] ☁️ Where is it hosted? 
-  - Is it on Google Cloud, AWS, Cloudflare, something else? 
-- [ ] 🪳 Are there any trackers present? 
-  - You can check [Blacklight](https://themarkup.org/blacklight) to begin with. 
-- [ ] 🛍 How is the site monetised? 
-  - Are there any affiliate links (Amazon, etc.)? 
-- [ ] 🧬 What are the various tracking identifiers, and are those shared with other domains?
-  - Check Google Analytics, Facebook Pixel, Quantcast, NewRelic, etc. 
-  - Use tools like [builtwith](https://builtwith.com), [RiskIQ](https://www.riskiq.com/), or [Dnslytics](https://dnslytics.com/) to see if other domains share the same ID. 
-- [ ] Are there any relevant subdomains? 
-  - Use Farsight Security [DNSDBScout](https://www.farsightsecurity.com/tools/dnsdb-scout/) Flexible.
-- [ ] 📜 Are there historic WHOIS records? 
-  - Look at [Whoxy](https://www.whoxy.com/) or [RiskIQ](https://www.riskiq.com/). 
-- [ ] ⌛️ Has the site changed over time?
-  - Look at [archive.org](https://archive.org/) to see whether the domain shifted tremendously — and if so when. 
-- [ ] 🗑 Did the earlier version of the site have more information? 
-  - People can remove info when a site's been up for a while. 
+- [ ] ☁️ کجا میزبانی می شود؟
+  - آیا در Google Cloud، AWS، Cloudflare، و چیز دیگری وجود دارد؟
+- [ ] 🪳 آیا ردیاب هایی وجود دارد؟
+  - برای شروع می توانید [Blacklight](https://themarkup.org/blacklight) را بررسی کنید.
+- [ ] 🛍 ​​کسب درآمد از سایت چگونه است؟
+  - آیا پیوندهای وابسته (آمازون و غیره) وجود دارد؟
+- [ ] 🧬 شناسه های مختلف ردیابی چیست و آیا آن ها با دامنه های دیگر به اشتراک گذاشته می شوند؟
+  - Google Analytics، Facebook Pixel، Quantcast، NewRelic و غیره را بررسی کنید.
+  - از ابزارهایی مانند [builtwith](https://builtwith.com)، [RiskIQ](https://www.riskiq.com/)، یا [Dnslytics](https://dnslytics.com/) استفاده کنید تا ببینید آیا دامنه های دیگر همان شناسه را به اشتراک می گذارند.
+- [ ] آیا زیر دامنه های مرتبطی وجود دارد؟
+  - از امنیت Farsight (https://www.farsightsecurity.com/tools/dnsdb-scout)[DNSDBScout]  انعطاف پذیر استفاده کنید.
+- [ ] 📜 آیا سوابق تاریخی WHOIS وجود دارد؟
+  - به [Whoxy](https://www.whoxy.com/) یا [RiskIQ](https://www.riskiq.com/) نگاه کنید.
+- [ ] ⌛️ آیا سایت در طول زمان تغییر کرده است؟
+  - به [archive.org](https://archive.org/) نگاه کنید تا ببینید آیا دامنه به شدت تغییر کرده است - و اگر چنین است چه زمانی.
+- [ ] 🗑 آیا نسخه قبلی سایت اطلاعات بیشتری داشت؟
+  - وقتی یک سایت برای مدتی فعال است، افراد می توانند اطلاعات را حذف کنند.
+#### منابع و ابزار
 
-#### Resources & Tools
-
-##### Books
-Open Source Intelligence Techniques - Michael Bazzell
+##### کتاب
+تکنیک های هوشمند منبع باز - مایکل بزل
 https://inteltechniques.com/book1.html
 
-Verification Handbook - edited by Craig Silverman
+کتابچه راهنمای تأیید - ویرایش شده توسط کریگ سیلورمن
 https://datajournalism.com/read/handbook/verification-3
 
-##### Website Infrastructure 
-- [Blacklight](https://themarkup.org/blacklight): The Markup's real-time website privacy inspector.
-- [builtwith.com](https://builtwith.com): gives you the infrastructure of the site, including IP addresses, analytics codes, tech stack, etc. Freemium model. 
-- [DNSDBScout]((https://www.farsightsecurity.com/tools/dnsdb-scout/)): allows you to search and ‘flexible search’ for passive dns lookups including IP <-> domain mapping. 
-- [Dnslytics](https://dnslytics.com/): offers a range of tools including reverse Analytics and reverse DNS lookups, as well as WHOIS data. Freemium. 
-- [RiskIQ](https://www.riskiq.com/): a ‘threat intelligence’ tool that allows you to get reverse IP, reverse analytics, WHOIS, SSL, subdomains, etc. 
-- [Whoxy](https://www.whoxy.com/): a tool that lets you see historical WHOIS registrations. Free. 
-- The Internet Archive [browser extension](chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html).
+##### زیرساخت وب سایت
+- [Blacklight](https://themarkup.org/blacklight): بازرس حریم خصوصی وب سایت مارکاپ در زمان واقعی.
+- [builtwith.com](https://builtwith.com): زیرساخت سایت شامل آدرس IP، کدهای تجزیه و تحلیل، پشته فناوری و غیره مدل فریمیوم را در اختیار شما قرار می دهد.
+- [DNSDBScout]((https://www.farsightsecurity.com/tools/dnsdb-scout/)): به شما امکان جستجو و «جستجوی انعطاف‌پذیر» برای جستجوهای غیرفعال dns از جمله نقشه‌برداری دامنه IP <-> را می‌دهد.
+- [Dnslytics](https://dnslytics.com/): طیف وسیعی از ابزارها از جمله تجزیه و تحلیل معکوس و جستجوی معکوس DNS، و همچنین داده های WHOIS را ارائه می دهد. فریمیوم.
+- [RiskIQ] (https://www.riskiq.com/): ابزاری «هوش تهدید» که به شما امکان می دهد IP معکوس، تجزیه و تحلیل معکوس، WHOIS، SSL، زیر دامنه ها و غیره را دریافت کنید.
+- [Whoxy](https://www.whoxy.com/): ابزاری که به شما امکان می‌دهد ثبت‌های WHOIS تاریخی را مشاهده کنید. رایگان.
+- آرشیو اینترنت [پسوند مرورگر] (chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html). 
 
 
-###### Social Media Accounts 
-- [Sensity AI](https://sensity.ai/deepfakes-detection/): check if an image is GAN-generated or not. Freemium. 
-- [whotwi.com](https://en.whotwi.com/): create a profile-at-a-glance for any account on Twitter. Free. 
+###### حساب های رسانه های اجتماعی
+- [Sensity AI](https://sensity.ai/deepfakes-detection/): بررسی کنید که آیا یک تصویر توسط GAN تولید شده است یا خیر. فریمیوم.
+- [whotwi.com](https://en.whotwi.com/): یک نمایه در یک نگاه برای هر حساب کاربری در توییتر ایجاد کنید. رایگان. 
+    </div>
