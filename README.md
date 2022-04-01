@@ -10,14 +10,14 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
 
   ### چک لیست جهت شناسایی صاحب سایت (ترجمه و اضافه کردن یک سری تکنیک) Persian . 
 
-  [@soheilhashemi](https://twitter.com/soheilhashemi_)
-  [OSINT?](https://twitter.com/soheilhashemi_/status/1446899535826100230?s=20)
-  [Blog Peneter](https://blog.peneter.com]
-  [OSINT1](https://blog.peneter.com/clubhouse-osint-1-preparation/)
-  [OSINT_Image](https://blog.peneter.com/clubhouse-osint-2-email/)
-  [OSINT_Email](https://blog.peneter.com/clubhouse-osint-3-email/)
-  [OSINT_Domain&IP](https://blog.peneter.com/clubhouse-osint-4-5-domain-ip/)
-  [OSINT_SocialMedia](https://blog.peneter.com/clubhouse-osint-6-social-network-twitter/)
+  [@soheilhashemi](https://twitter.com/soheilhashemi_)</br>
+  [OSINT?](https://twitter.com/soheilhashemi_/status/1446899535826100230?s=20)</br>
+  [Blog_Peneter](https://blog.peneter.com)</br>
+  [OSINT1](https://blog.peneter.com/clubhouse-osint-1-preparation/)</br>
+  [OSINT_Image](https://blog.peneter.com/clubhouse-osint-2-email/)</br>
+  [OSINT_Email](https://blog.peneter.com/clubhouse-osint-3-email/)</br>
+  [OSINT_Domain&IP](https://blog.peneter.com/clubhouse-osint-4-5-domain-ip/)</br>
+  [OSINT_SocialMedia](https://blog.peneter.com/clubhouse-osint-6-social-network-twitter/)</br>
 
 #### این چیست ؟
 این چک لیست قرار است به عنوان یک ابزار گزارش برای کمک به روزنامه نگاران و محققان در هنگام تلاش برای یافتن اینکه چه کسی یک وب سایت را منتشر کرده است، استفاده شود. این به معنای استفاده در ارتباط با تکنیک های گزارش دهی آفلاین است. 
