@@ -9,8 +9,8 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
 *Thank you to Svetlana Borodina at Harriman Institute for the Russian translation!*
 
   ### چک لیست جهت شناسایی صاحب سایت (ترجمه و اضافه کردن یک سری تکنیک) Persian . 
-
-  [@soheilhashemi](https://twitter.com/soheilhashemi_)</br>
+### اوسینت تکنیک هایی که توسط آن ها اطلاعات  متن عکس فیلم موقعیت جغرافیایی را می توان جمع آوری کرد.سایتهایی که سرویس اوسینت ارایه میکنند در واقع از موتورهای جستجو مختلف استفاده میکنند.برخی از سایتها سرویس رایگان میدهند و برخی پولی.همچنین ابزارهای متن بازی که به صورت خودکار فرآیند اوسینت را انجام میدهند در واقع از APIهای سایتها استفاده میکنند. 
+ [@soheilhashemi](https://twitter.com/soheilhashemi_)</br>
   [OSINT?](https://twitter.com/soheilhashemi_/status/1446899535826100230?s=20)</br>
   [Blog_Peneter](https://blog.peneter.com)</br>
   [OSINT1](https://blog.peneter.com/clubhouse-osint-1-preparation/)</br>
@@ -31,22 +31,22 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
 ##### متن
 - ✍️ آیا نویسندگانی لیست شده اند؟
  - اگر سایت وردپرس است، این مانند لینک زیر در گوگل سرچ کنید تا لیست نویسندگان را مشاهده کنید:<br/> 
-  `https://yourwebsite.com/author/*/` <br/>
+  - `https://yourwebsite.com/author/*/` <br/>
    - به عنوان مثال اگر روی سایت پنتر بزنید می بینید که یوزرنیم نویسنده "Peneter" است:<br/>
-   `https://blog.peneter.com/author/*/`
+  -  `https://blog.peneter.com/author/*/`
 
 - [ ] 📫 آیا آدرس ایمیل یا اطلاعات تماس وجود دارد؟
    - اگر آدرس های ایمیل وجود دارد، آیا ایمیل با دامین سایت هست یا میل سرور عمومی هست؟ در قسمت ایمیل های لینک زیر ابزارهای اوسینت معرفی شده اند:
-   - https://osintframework.com/
-   - https://map.malfrats.industries/
-   - https://lampyre.io/
+ 1. https://osintframework.com/ </br>
+ 2. https://map.malfrats.industries/ </br>
+ 3. https://lampyre.io/ </br>
  
    - آیا ایمیل در [haveibeenpwned.com](https://haveibeenpwned.com) نمایش داده می شود؟ (اگر توسط ایمیل در جایی ثبت نام شده باشد که دیتابیسش لیک شده باشد می توانید در بعضی مواقع پسورد یا اسم و فامیل نویسنده را بدست آورید)
    - بررسی کنید که آیا گراواتار مرتبط با آن آدرس وجود دارد یا خیر:
      - https://en.gravatar.com/site/check/XXXXX@gmail.com </br>
      
 - [ ] 🕑 ساعت محلی سرور چقدر است؟
-   - به ویژگی 'datetime' در سورس HTML سایت های وردپرس نگاه کنید. CTLR + U سپس دنبال <Time> بگردید : 
+   - به ویژگی 'datetime' در سورس HTML سایت های وردپرس نگاه کنید. CTLR + U سپس دنبال <Time> بگردید :<br/> 
    ``<time datetime="1401-01-06"><i class="remixicon remixicon-calendar-line"></i> 6 فروردین 1401</time>``
 - [ ] 🕶 آیا وب سایت قانون حفظ حریم خصوصی یا شرایط و ضوابطی دارد که به یک LLC اشاره می کند، یا چه قوانین منطقه ای اعمال می شود؟
 - [ ] 📡 آیا وبسایت فید RSS دارد؟
@@ -61,7 +61,7 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
      - سعی کنید مراحل پرداخت را طی کنید (بدون پرداخت). گاهی اوقات نام گیرنده واقعی درست قبل از تایید پرداخت فاش می شود. 
 ​
 ##### پیوندها
-- [ ] 🔗 وب سایت بیشتر به چه دامنه هایی لینک می دهد؟ (نیاز به تراشیدن دارد)
+- [ ] 🔗 وب سایت بیشتر به چه دامنه هایی لینک می دهد؟ (نیاز به کرال کردن دارد)از linkgopher استفاده کنید.
 - [ ] ❤️ چه کسی بیشتر به دامنه لینک می دهد؟
      - اپراتور جستجوی گوگل: "link:yourwebsite.com"
      - بک لینک ها را در [ahrefs.com](https://ahrefs.com) بررسی کنید 💵
@@ -73,7 +73,7 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
   - [sensity.ai] (https://sensity.ai) را بررسی کنید تا ببینید آیا تصویر GAN تولید شده است یا خیر
   - درباره مشاهده تصاویر تولید شده توسط GAN [اینجا](https://www.theguardian.com/technology/2020/jan/13/what-are-deepfakes-and-how-can-you-spot-them) بیشتر بخوانید.
 - [ ] 🔎 آیا تصاویر دارای داده EXIF ​​هستند؟
-    - دستورالعمل‌ها [اینجا](https://www.howtogeek.com/289712/how-to-see-an-images-exif-data-in-windows-and-macos/#:~:text=Viewing%20EXIF% 20داده%20در%20ویندوز،%20عکس%20%20با%20گرفته شد.).
+    - دستورالعمل‌ها [اینجا](https://www.howtogeek.com/289712/how-to-see-an-images-exif-data-in-windows-and-macos/#:~:text=Viewing%20EXIF%)
 - [ ] 👀 آیا تصاویر اطلاعات شناسایی دیگری دارند؟
   - فهرست را اجرا کنید [اینجا](https://themarkup.org/ask-the-markup/2020/03/12/photos-privacy)
 - [ ] 🪣 تصاویر کجا میزبانی می شوند؟
@@ -82,18 +82,18 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
   - در موتور جستجو، "filetype:pdf site:<yourwebsite.com>"
   - اگر تعدادی پیدا کردید، متادیتا را با "دریافت اطلاعات" در نمایشگر PDF خود بررسی کنید. (اگر پاک نشده باشد شما به اسم نویسنده،ایمیل، تکنولوژی، یوزنیم سیستم عامل دست پیدا خواهید کرد)
   -شما می توانید از موتورهای جستجو دیگر برای انجام سرچ (دورک) استفاده کنید برخی از موتورهای جست و جو:
-    https://www.google.com/
-    https://www.google.com/advanced_search
-    http://www.googleguide.com/print/adv_op_ref.pdf
-    https://www.bing.com/
-    https://www.bruceclay.com/blog/bing-google-advanced-search-operators/
-    https://yandex.com/
-    https://duckduckgo.com/
-    https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/
-    https://baidu.com
+
+ 1. https://www.google.com/ </br>
+  2. https://www.google.com/advanced_search </br>
+  3. http://www.googleguide.com/print/adv_op_ref.pdf </br>
+  4. https://www.bing.com/ </br>
+  5. https://www.bruceclay.com/blog/bing-google-advanced-search-operators/ </br>
+  6. https://yandex.com/ </br>
+  7. https://duckduckgo.com/ </br>
+  8. https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/ </br>
+  9. https://baidu.com </br>
  -این کار می توانید با دو ابزاز زیر به صورت اتومات انجام دهید (متادیتا خودشان استخراج می کنند)
-   (https://www.kali.org/tools/metagoofil)[metagoofil]
-   (https://github.com/ElevenPaths/FOCA)[FOCA]
+   [metagoofil](https://www.kali.org/tools/metagoofil) و [FOCA](https://github.com/ElevenPaths/FOCA)
   
 ​
 #### رسانه های اجتماعی
@@ -126,19 +126,26 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
 - [ ] اولین فالوور/فالوور حساب چه کسانی بودند؟
      - این را اینجا پیدا کنید:
    `https://en.whotwi.com/` 
-​
+​دورک در توییتر:
+https://twitter.com/search-advanced
+بر اساس یوزرنیم و تاریخ می توانید سرچ کنید.
+ابزارهای اوسینت توییتر:
+1. https://socialbearing.com/
+2. https://www.twitonomy.com/
+3. https://tweetbeaver.com/
+4. http://spoonbill.io/
+5. https://tinfoleak.com/
 ##### پلتفرم های دیگر
 فراموش نکنید که بررسی کنید ببینید آیا سایت دارای حساب‌هایی در یوتیوب، اینستاگرام، ردیت، گیت‌هاب، 
 
 #### زیرساخت ( منظور سرور)
 - [ ] 🗄 آیا وب سایت را بایگانی کرده اید؟ (تو همیشه باید!)
-   - می توانید این کار را در archive.org انجام دهید یا از [پسوند مرورگر] آن استفاده کنید (chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html).
-   - می توانید کل وب سایت را در ترمینال با «wget» بگیرید:
+   - می توانید این کار را در archive.org انجام دهید یا از [Waybackmachin](chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html) آن استفاده کنید. برای مرورگر فایرفاکس هم این پلاگین وجود دارد.
+   - می توانید کل وب سایت را در ترمینال با «wget» بگیرید یا برنامه httrack:
     `wget -mpEk <yourwebsite.com>` 
 
-- [ ] 🖥 وب سایت از چه چیزی استفاده می کند؟
+- [ ] 🖥 وب سایت از چه چیزی استفاده می کند؟ برای اینکار می توانید از پلاگین [Wappalyzer](https://www.wappalyzer.com) را روی مرورگر خود نصب کنید یا آنلاین مشاهده کنید.
    - آیا از Wordpress، Squarespace، چیز دیگری استفاده می کند؟ 
-
 - [ ] ☁️ کجا میزبانی می شود؟
   - آیا در Google Cloud، AWS، Cloudflare، و چیز دیگری وجود دارد؟
 - [ ] 🪳 آیا ردیاب هایی وجود دارد؟
@@ -149,7 +156,7 @@ Slides: [English](https://docs.google.com/presentation/d/1tRae65Eln072zLbbdIPyeJ
   - Google Analytics، Facebook Pixel، Quantcast، NewRelic و غیره را بررسی کنید.
   - از ابزارهایی مانند [builtwith](https://builtwith.com)، [RiskIQ](https://www.riskiq.com/)، یا [Dnslytics](https://dnslytics.com/) استفاده کنید تا ببینید آیا دامنه های دیگر همان شناسه را به اشتراک می گذارند.
 - [ ] آیا زیر دامنه های مرتبطی وجود دارد؟
-  - از امنیت Farsight (https://www.farsightsecurity.com/tools/dnsdb-scout)[DNSDBScout]  انعطاف پذیر استفاده کنید.
+  - از سرویس Farsight  (https://www.farsightsecurity.com/tools/dnsdb-scout)[DNSDBScout]  انعطاف پذیر استفاده کنید.
 - [ ] 📜 آیا سوابق تاریخی WHOIS وجود دارد؟
   - به [Whoxy](https://www.whoxy.com/) یا [RiskIQ](https://www.riskiq.com/) نگاه کنید.
 - [ ] ⌛️ آیا سایت در طول زمان تغییر کرده است؟
@@ -172,7 +179,7 @@ https://datajournalism.com/read/handbook/verification-3
 - [Dnslytics](https://dnslytics.com/): طیف وسیعی از ابزارها از جمله تجزیه و تحلیل معکوس و جستجوی معکوس DNS، و همچنین داده های WHOIS را ارائه می دهد. فریمیوم.
 - [RiskIQ] (https://www.riskiq.com/): ابزاری «هوش تهدید» که به شما امکان می دهد IP معکوس، تجزیه و تحلیل معکوس، WHOIS، SSL، زیر دامنه ها و غیره را دریافت کنید.
 - [Whoxy](https://www.whoxy.com/): ابزاری که به شما امکان می‌دهد ثبت‌های WHOIS تاریخی را مشاهده کنید. رایگان.
-- آرشیو اینترنت [پسوند مرورگر] (chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html). 
+- آرشیو اینترنت [پلاگین کروم](chrome-extension://fpnmgdkabkmnadcjpehmlllkndpkmiak/about.html). 
 
 
 ###### حساب های رسانه های اجتماعی
